@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ahuja\\source\\repos\\WebApplication5\\WebApplication5\\WebApplication5.csproj": {}
+    "C:\\Users\\lenovo\\source\\repos\\task3\\WebApplication5\\WebApplication5.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ahuja\\source\\repos\\WebApplication5\\WebApplication5\\WebApplication5.csproj": {
+    "C:\\Users\\lenovo\\source\\repos\\task3\\WebApplication5\\WebApplication5.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ahuja\\source\\repos\\WebApplication5\\WebApplication5\\WebApplication5.csproj",
+        "projectUniqueName": "C:\\Users\\lenovo\\source\\repos\\task3\\WebApplication5\\WebApplication5.csproj",
         "projectName": "WebApplication5",
-        "projectPath": "C:\\Users\\ahuja\\source\\repos\\WebApplication5\\WebApplication5\\WebApplication5.csproj",
-        "packagesPath": "C:\\Users\\ahuja\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ahuja\\source\\repos\\WebApplication5\\WebApplication5\\obj\\",
+        "projectPath": "C:\\Users\\lenovo\\source\\repos\\task3\\WebApplication5\\WebApplication5.csproj",
+        "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lenovo\\source\\repos\\task3\\WebApplication5\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ahuja\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -44,6 +44,10 @@
             "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
               "target": "Package",
               "version": "[3.1.16, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.8, )"
             },
             "Npgsql": {
               "target": "Package",

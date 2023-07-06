@@ -10,6 +10,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using WebApplication5;
+using WebApplication5.Services;
 
 namespace WebApplication1.Controllers
 {
@@ -17,172 +18,104 @@ namespace WebApplication1.Controllers
     [ApiController]
     public class EmployeeController : ControllerBase
     {
-        private readonly IConfiguration _configuration;
-        private readonly IWebHostEnvironment _env;
-        public EmployeeController(IConfiguration configuration, IWebHostEnvironment env)
+        private readonly IEmployeeService _employeeService;
+        
+
+        // inject ContactsAPIDbContext into the controller
+        public EmployeeController(IEmployeeService employeeService, ILogger _logger)
         {
-            _configuration = configuration;
-            _env = env;
+            _employeeService = employeeService;
+            
         }
 
+        // get method to get all the contacts
         [HttpGet]
-        public JsonResult Get()
+        public async Task<IActionResult> GetAllEmployees()
         {
-            string query = @"
-                select EmployeeId as ""EmployeeId"",
-                        EmployeeName as ""EmployeeName"",
-                        Department as ""Department"",
-                        to_char(DateOfJoining,'YYYY-MM-DD') as ""DateOfJoining"",
-                        PhotoFileName as ""PhotoFileName""
-                from Employee
-            ";
-
-            DataTable table = new DataTable();
-            string sqlDataSource = _configuration.GetConnectionString("EmployeeAppCon");
-            NpgsqlDataReader myReader;
-            using (NpgsqlConnection myCon = new NpgsqlConnection(sqlDataSource))
+            var res = await _employeeService.GetAllEmployees();
+            if (res != null)
             {
-                myCon.Open();
-                using (NpgsqlCommand myCommand = new NpgsqlCommand(query, myCon))
-                {
-                    myReader = myCommand.ExecuteReader();
-                    table.Load(myReader);
-
-                    myReader.Close();
-                    myCon.Close();
-
-                }
+                return Ok(res);
             }
 
-            return new JsonResult(table);
+            return BadRequest("Error while retrieving data");
         }
 
+        // get method to get a specific employee using 'id' as a parameter in route
+        [HttpGet]
+        [Route("{id}")]
+        public async Task<IActionResult> GetEmployee([FromRoute] Guid id)
+        {
+            var employee = await _employeeService.GetEmployeeById(id);
+            if (employee != null)
+            {
 
+                return Ok(employee);
+
+            }
+
+            
+            return NotFound();
+        }
+
+        // add a new employee to the databse
         [HttpPost]
-        public JsonResult Post(Employee emp)
+        public async Task<IActionResult> AddEmployee(Employee employee)
         {
-            string query = @"
-                insert into Employee (EmployeeName,Department,DateOfJoining,PhotoFileName) 
-                values               (@EmployeeName,@Department,@DateOfJoining,@PhotoFileName) 
-            ";
-
-            DataTable table = new DataTable();
-            string sqlDataSource = _configuration.GetConnectionString("EmployeeAppCon");
-            NpgsqlDataReader myReader;
-            using (NpgsqlConnection myCon = new NpgsqlConnection(sqlDataSource))
+            var res = await _employeeService.AddEmployee(employee);
+            if (res != null)
             {
-                myCon.Open();
-                using (NpgsqlCommand myCommand = new NpgsqlCommand(query, myCon))
-                {
-
-                    myCommand.Parameters.AddWithValue("@EmployeeName", emp.EmployeeName);
-                    myCommand.Parameters.AddWithValue("@Department", emp.Department);
-                    myCommand.Parameters.AddWithValue("@DateOfJoining", Convert.ToDateTime(emp.DateOfJoining));
-                    myCommand.Parameters.AddWithValue("@PhotoFileName", emp.PhotoFileName);
-                    myReader = myCommand.ExecuteReader();
-                    table.Load(myReader);
-
-                    myReader.Close();
-                    myCon.Close();
-
-                }
+                return Ok(res);
             }
 
-            return new JsonResult("Added Successfully");
+            return BadRequest("Error while inserting employee");
+
         }
 
+        // update a particular contact in the database
         [HttpPut]
-        public JsonResult Put(Employee emp)
+        [Route("{id}")]
+        public async Task<IActionResult> UpdateContact([FromRoute] Guid id, Employee employee)
         {
-            string query = @"
-                update Employee
-                set EmployeeName = @EmployeeName,
-                Department = @Department,
-                DateOfJoining = @DateOfJoining,
-                PhotoFileName = @PhotoFileName
-                where EmployeeId=@EmployeeId 
-            ";
 
-            DataTable table = new DataTable();
-            string sqlDataSource = _configuration.GetConnectionString("EmployeeAppCon");
-            NpgsqlDataReader myReader;
-            using (NpgsqlConnection myCon = new NpgsqlConnection(sqlDataSource))
+            if (employee == null)
             {
-                myCon.Open();
-                using (NpgsqlCommand myCommand = new NpgsqlCommand(query, myCon))
-                {
-                    myCommand.Parameters.AddWithValue("@EmployeeId", emp.EmployeeId);
-                    myCommand.Parameters.AddWithValue("@EmployeeName", emp.EmployeeName);
-                    myCommand.Parameters.AddWithValue("@Department", emp.Department);
-                    myCommand.Parameters.AddWithValue("@DateOfJoining", Convert.ToDateTime(emp.DateOfJoining));
-                    myCommand.Parameters.AddWithValue("@PhotoFileName", emp.PhotoFileName);
-                    myReader = myCommand.ExecuteReader();
-                    table.Load(myReader);
-
-                    myReader.Close();
-                    myCon.Close();
-
-                }
+                return BadRequest("Null input passed");
+            }
+            if (!ModelState.IsValid)
+            {
+                return BadRequest("Object input format incorrect");
             }
 
-            return new JsonResult("Updated Successfully");
+            int res = await _employeeService.UpdateEmployee(id, employee);
+            if (res != 0)
+            {
+                return Ok();
+            }
+
+            return NotFound("Contact not found");
+
         }
 
-        [HttpDelete("{id}")]
-        public JsonResult Delete(int id)
+        // delete a contact from database
+        [HttpDelete]
+        [Route("{id}")]
+        public async Task<IActionResult> DeleteEmployee([FromRoute] Guid id)
         {
-            string query = @"
-                delete from Employee
-                where EmployeeId=@EmployeeId 
-            ";
+            int res = await _employeeService.DeleteEmployee(id);
 
-            DataTable table = new DataTable();
-            string sqlDataSource = _configuration.GetConnectionString("EmployeeAppCon");
-            NpgsqlDataReader myReader;
-            using (NpgsqlConnection myCon = new NpgsqlConnection(sqlDataSource))
+            if (res == 1)
             {
-                myCon.Open();
-                using (NpgsqlCommand myCommand = new NpgsqlCommand(query, myCon))
-                {
-                    myCommand.Parameters.AddWithValue("@EmployeeId", id);
-                    myReader = myCommand.ExecuteReader();
-                    table.Load(myReader);
-
-                    myReader.Close();
-                    myCon.Close();
-
-                }
+                return Ok();
             }
 
-            return new JsonResult("Deleted Successfully");
+            return NotFound();
         }
-
-
-        [Route("SaveFile")]
-        [HttpPost]
-        public JsonResult SaveFile()
-        {
-            try
-            {
-                var httpRequest = Request.Form;
-                var postedFile = httpRequest.Files[0];
-                string filename = postedFile.FileName;
-                var physicalPath = _env.ContentRootPath + "/Photos/" + filename;
-                using (var stream = new FileStream(physicalPath, FileMode.Create))
-                {
-                    postedFile.CopyTo(stream);
-                }
-
-                return new JsonResult(filename);
-            }
-            catch (Exception)
-            {
-
-                return new JsonResult("anonymous.png");
-            }
-        }
-
-
-
     }
 }
+
+        
+
+
+
+    
