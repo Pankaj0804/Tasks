@@ -16,6 +16,7 @@ namespace WebApplication5.Controllers
         public WeatherForecastController(ILogger<WeatherForecastController> logger)
         {
             _logger = logger;
+            _logger.Log(LogLevel.Information, "Hello");
         }
 
         [HttpGet(Name = "GetWeatherForecast")]
