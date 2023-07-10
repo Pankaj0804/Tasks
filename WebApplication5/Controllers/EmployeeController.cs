@@ -1,71 +1,59 @@
-﻿using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
-using Npgsql;
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-using WebApplication5;
-using WebApplication5.Services;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using System;
+using System.Threading.Tasks;
+using WebApplication5.Services;
 
-namespace WebApplication1.Controllers
+namespace WebApplication5.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     public class EmployeeController : ControllerBase
     {
         private readonly IEmployeeService _employeeService;
-        private readonly ILogger<EmployeeController> logger;
+        private readonly ILogger<EmployeeController> _logger;
 
-        // inject ContactsAPIDbContext into the controller
-        public EmployeeController(IEmployeeService employeeService, ILogger<EmployeeController> _logger)
+
+        public EmployeeController(IEmployeeService employeeService, ILogger<EmployeeController> logger)
         {
             _employeeService = employeeService;
-            logger = _logger;
+            _logger = logger;
         }
 
-        // get method to get all the contacts
         [HttpGet]
         public async Task<IActionResult> GetAllEmployees()
         {
-            logger.LogInformation("Executing {Action}", nameof(GetAllEmployees));
+            _logger.LogInformation("Executing {Action}", nameof(GetAllEmployees));
             var res = await _employeeService.GetAllEmployees();
             if (res != null)
             {
-                logger.LogInformation("Retrieve all employees");
+                _logger.LogInformation("Retrieve all employees");
                 return Ok(res);
             }
 
-            logger.LogError("No employees available");
+            _logger.LogError("No employees available");
             return BadRequest("Error while retrieving data");
         }
 
-        // get method to get a specific employee using 'id' as a parameter in route
         [HttpGet("{id}")]
         public async Task<IActionResult> GetEmployee([FromRoute] Guid id)
         {
-            logger.LogInformation("Executing {Action} with parameters {id}", nameof(GetEmployee), id);
+            _logger.LogInformation("Executing {Action} with parameters {id}", nameof(GetEmployee), id);
             var employee = await _employeeService.GetEmployeeById(id);
             if (employee != null)
             {
-                logger.LogInformation("Employee found : {name}", employee.EmployeeName);
+                _logger.LogInformation("Employee found: {name}", employee.EmployeeName);
                 return Ok(employee);
             }
 
-            logger.LogError("Employee not found");
+            _logger.LogError("Employee not found");
             return NotFound();
         }
 
-        // add a new employee to the database
         [HttpPost]
         public async Task<IActionResult> AddEmployee([FromBody] Employee employee)
         {
-            logger.LogInformation("Executing {Action}", nameof(AddEmployee));
+            _logger.LogInformation("Executing {Action}", nameof(AddEmployee));
             if (!ModelState.IsValid)
             {
                 return BadRequest("Invalid employee data");
@@ -74,57 +62,75 @@ namespace WebApplication1.Controllers
             var res = await _employeeService.AddEmployee(employee);
             if (res != 0)
             {
-                logger.LogInformation("Employee added: {name}", employee.EmployeeName);
+                _logger.LogInformation("Employee added: {name}", employee.EmployeeName);
                 return Ok(res);
             }
 
-            logger.LogError("Error while inserting employee");
+            _logger.LogError("Error while inserting employee");
             return BadRequest("Error while inserting employee");
         }
 
-        // update a particular contact in the database
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateEmployee([FromRoute] Guid id, [FromBody] Employee employee)
         {
-            logger.LogInformation("Executing {Action}", nameof(UpdateEmployee));
+            _logger.LogInformation("Executing {Action}", nameof(UpdateEmployee));
 
             if (employee == null)
             {
-                logger.LogInformation("Null input passed");
+                _logger.LogInformation("Null input passed");
                 return BadRequest("Null input passed");
             }
             if (!ModelState.IsValid)
             {
-                logger.LogError("Object input format incorrect");
+                _logger.LogError("Object input format incorrect");
                 return BadRequest("Object input format incorrect");
             }
 
             int res = await _employeeService.UpdateEmployee(id, employee);
             if (res != 0)
             {
-                logger.LogInformation("Employee updated: {name}, updateemployee.name");
+                _logger.LogInformation("Employee updated: {name}", employee.EmployeeName);
                 return Ok();
             }
 
-            logger.LogError("Contact not found");
+            _logger.LogError("Contact not found");
             return NotFound("Employee not found");
         }
 
-        // delete a contact from the database
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteEmployee([FromRoute] Guid id)
         {
-            logger.LogInformation("Executing {Action}", nameof(DeleteEmployee));
+            _logger.LogInformation("Executing {Action}", nameof(DeleteEmployee));
             int res = await _employeeService.DeleteEmployee(id);
 
             if (res == 1)
             {
-                logger.LogInformation("Employee deleted");
+                _logger.LogInformation("Employee deleted");
                 return Ok();
             }
 
-            logger.LogError("Employee not found");
+            _logger.LogError("Employee not found");
             return NotFound();
+        }
+    }
+
+    [ApiController]
+    [Route("api/[controller]")]
+    public class MyController : ControllerBase
+    {
+        private readonly ILogger<MyController> _logger;
+
+        public MyController(ILogger<MyController> logger)
+        {
+            _logger = logger;
+        }
+
+        [HttpGet]
+        public IActionResult Get()
+        {
+            _logger.LogInformation("GET request received.");
+            
+            return Ok();
         }
     }
 }

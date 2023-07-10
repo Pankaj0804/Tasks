@@ -93,3 +93,7 @@ C:\Users\ahuja\source\repos\WebApplication5\WebApplication5\bin\Debug\net6.0\run
 C:\Users\ahuja\source\repos\WebApplication5\WebApplication5\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 C:\Users\ahuja\source\repos\WebApplication5\WebApplication5\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.InMemory.dll
 C:\Users\ahuja\source\repos\WebApplication5\WebApplication5\bin\Debug\net6.0\Serilog.dll
+C:\Users\ahuja\source\repos\WebApplication5\WebApplication5\bin\Debug\net6.0\NLog.dll
+C:\Users\ahuja\source\repos\WebApplication5\WebApplication5\bin\Debug\net6.0\NLog.Extensions.Logging.dll
+C:\Users\ahuja\source\repos\WebApplication5\WebApplication5\bin\Debug\net6.0\NLog.Web.AspNetCore.dll
+C:\Users\ahuja\source\repos\WebApplication5\WebApplication5\bin\Debug\net6.0\nlog.config
