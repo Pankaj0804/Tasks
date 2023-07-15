@@ -47,14 +47,14 @@ public class Program
         //    loggingBuilder.ClearProviders();
         //    loggingBuilder.AddNLog();
         //});
-        //builder.Host.UseNLog();
+       builder.Host.UseNLog();
 
-        //builder.services.adddbcontext<employeedbcontext>
+        // builder.Services.AddDbContext<EmployeeDbContext>
         //  (options => options.UseInMemoryDatabase("EmployeesDb"));
 
         builder.Services.AddDbContext<EmployeeDbContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("EmployeeAppCon")
-));
+            options.UseNpgsql(builder.Configuration.GetConnectionString("EmployeeAppCon")
+        ));
         //coming from WebApplication5.Data
         //injecting dbcontext to services inmemory db to talk with database
         //using Microsoft.EntityFrameworkCore which gives option to use inmemory database

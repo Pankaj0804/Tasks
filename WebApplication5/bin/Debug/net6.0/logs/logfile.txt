@@ -1,2 +1,146 @@
 2023-07-10 15:37:58.9709 Debug Starting application...
 2023-07-10 15:37:59.1578 Error An error occurred while starting the application.
+2023-07-11 11:54:39.6881|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider
+2023-07-11 11:54:40.2718|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting
+2023-07-11 11:54:40.6892|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5059
+2023-07-11 11:54:40.6892|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly WebApplication5
+2023-07-11 11:54:40.6892|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2023-07-11 11:54:40.6892|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2023-07-11 11:54:40.7017|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down.
+2023-07-11 11:54:40.7017|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development
+2023-07-11 11:54:40.7017|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\ahuja\source\repos\WebApplication5\WebApplication5\
+2023-07-11 11:54:40.7017|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started
+2023-07-11 11:54:40.8702|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMS1QU1696H0" accepted.
+2023-07-11 11:54:40.8702|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMS1QU1696H1" accepted.
+2023-07-11 11:54:40.8801|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMS1QU1696H1" started.
+2023-07-11 11:54:40.8801|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMS1QU1696H0" started.
+2023-07-11 11:54:41.8080|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMS1QU1696H2" accepted.
+2023-07-11 11:54:41.8080|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMS1QU1696H2" started.
+2023-07-11 11:54:41.8199|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMS1QU1696H3" accepted.
+2023-07-11 11:54:41.8199|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMS1QU1696H3" started.
+2023-07-11 11:54:41.9415|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5059/swagger/index.html - -
+2023-07-11 11:54:42.0281|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed.
+2023-07-11 11:54:42.0281|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed.
+2023-07-11 11:54:42.0743|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/index.html'
+2023-07-11 11:54:42.0743|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints
+2023-07-11 11:54:42.5387|DEBUG|Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware|Response markup is scheduled to include browser refresh script injection.
+2023-07-11 11:54:42.8765|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5059/_framework/aspnetcore-browser-refresh.js - -
+2023-07-11 11:54:42.8765|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMS1QU1696H4" accepted.
+2023-07-11 11:54:42.8765|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMS1QU1696H4" started.
+2023-07-11 11:54:42.8765|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5059/_vs/browserLink - -
+2023-07-11 11:54:42.8969|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMS1QU1696H3" completed keep alive response.
+2023-07-11 11:54:42.8969|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5059/_framework/aspnetcore-browser-refresh.js - - - 200 12000 application/javascript;+charset=utf-8 20.7182ms
+2023-07-11 11:54:42.9050|DEBUG|Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware|Response markup was updated to include browser refresh script injection.
+2023-07-11 11:54:42.9050|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMS1QU1696H2" completed keep alive response.
+2023-07-11 11:54:42.9334|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5059/swagger/index.html - - - 200 - text/html;charset=utf-8 999.8268ms
+2023-07-11 11:54:43.2241|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMS1QU1696H4" completed keep alive response.
+2023-07-11 11:54:43.2241|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5059/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 339.6338ms
+2023-07-11 11:54:43.2845|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5059/swagger/v1/swagger.json - -
+2023-07-11 11:54:43.2845|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed.
+2023-07-11 11:54:43.2845|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|No candidates found for the request path '/swagger/v1/swagger.json'
+2023-07-11 11:54:43.2845|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request did not match any endpoints
+2023-07-11 11:54:43.5346|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMS1QU1696H4" completed keep alive response.
+2023-07-11 11:54:43.5346|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5059/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 250.3272ms
+2023-07-11 11:54:49.0896|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMS1QU1696H3" received FIN.
+2023-07-11 11:54:49.0927|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMS1QU1696H4" received FIN.
+2023-07-11 11:54:49.0927|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMS1QU1696H2" received FIN.
+2023-07-11 11:54:49.2138|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMS1QU1696H3" sending FIN because: "The client closed the connection."
+2023-07-11 11:54:49.2138|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMS1QU1696H4" sending FIN because: "The client closed the connection."
+2023-07-11 11:54:49.2138|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMS1QU1696H2" sending FIN because: "The client closed the connection."
+2023-07-11 11:54:49.2138|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMS1QU1696H2" disconnecting.
+2023-07-11 11:54:49.2138|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMS1QU1696H3" disconnecting.
+2023-07-11 11:54:49.2138|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMS1QU1696H4" disconnecting.
+2023-07-11 11:54:49.2194|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMS1QU1696H4" stopped.
+2023-07-11 11:54:49.2194|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMS1QU1696H2" stopped.
+2023-07-11 11:54:49.2194|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMS1QU1696H3" stopped.
+2023-07-11 11:54:49.4258|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMS1QU1696H5" accepted.
+2023-07-11 11:54:49.4258|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMS1QU1696H5" started.
+2023-07-11 11:54:49.4258|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET http://localhost:5059/api/Employee - -
+2023-07-11 11:54:49.4258|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed.
+2023-07-11 11:54:49.4357|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/Employee'
+2023-07-11 11:54:49.4357|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'WebApplication5.Controllers.EmployeeController.GetAllEmployees (WebApplication5)' with route pattern 'api/Employee' is valid for the request path '/api/Employee'
+2023-07-11 11:54:49.4357|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'WebApplication5.Controllers.EmployeeController.GetAllEmployees (WebApplication5)'
+2023-07-11 11:54:49.4357|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint.
+2023-07-11 11:54:49.4541|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'WebApplication5.Controllers.EmployeeController.GetAllEmployees (WebApplication5)'
+2023-07-11 11:54:49.5303|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "GetAllEmployees", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllEmployees() on controller WebApplication5.Controllers.EmployeeController (WebApplication5).
+2023-07-11 11:54:49.5303|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None
+2023-07-11 11:54:49.5303|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None
+2023-07-11 11:54:49.5303|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)
+2023-07-11 11:54:49.5303|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None
+2023-07-11 11:54:49.5303|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)
+2023-07-11 11:54:49.5303|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller WebApplication5.Controllers.EmployeeController (WebApplication5)
+2023-07-11 11:54:50.7724|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-07-11 11:54:50.8436|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller WebApplication5.Controllers.EmployeeController (WebApplication5)
+2023-07-11 11:54:50.8436|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2023-07-11 11:54:50.8436|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2023-07-11 11:54:50.8436|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2023-07-11 11:54:50.8436|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2023-07-11 11:54:50.8617|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method WebApplication5.Controllers.EmployeeController.GetAllEmployees (WebApplication5) - Validation state: Valid
+2023-07-11 11:54:50.8617|INFO|WebApplication5.Controllers.EmployeeController|Executing GetAllEmployees
+2023-07-11 11:54:52.4957|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 7.0.8 initialized 'EmployeeDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:7.0.4+96806371445869d20be357993820cd4be366e145' with options: None
+2023-07-11 11:54:52.5781|DEBUG|Microsoft.EntityFrameworkCore.Query|Compiling query expression: 
+'DbSet<Employee>()'
+2023-07-11 11:54:53.0690|DEBUG|Microsoft.EntityFrameworkCore.Query|Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<Employee>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Employee.EmployeeId (Guid) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Employee.Email (string) Required, 1], [Property: Employee.EmployeeName (string) Required, 2], [Property: Employee.Phone (long) Required, 3] }
+        SELECT e.EmployeeId, e.Email, e.EmployeeName, e.Phone
+        FROM Employees AS e), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Employee>, 
+    WebApplication5.Data.EmployeeDbContext, 
+    False, 
+    False, 
+    True
+)'
+2023-07-11 11:54:53.1583|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Creating DbCommand for 'ExecuteReader'.
+2023-07-11 11:54:53.1583|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Creating DbConnection.
+2023-07-11 11:54:53.3348|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Created DbConnection. (165ms).
+2023-07-11 11:54:53.3482|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Created DbCommand for 'ExecuteReader' (184ms).
+2023-07-11 11:54:53.3482|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Initialized DbCommand for 'ExecuteReader' (196ms).
+2023-07-11 11:54:53.3715|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opening connection to database 'myWebApi' on server ''.
+2023-07-11 11:54:54.1042|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Opened connection to database 'myWebApi' on server 'tcp://localhost:8240'.
+2023-07-11 11:54:54.1240|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT e."EmployeeId", e."Email", e."EmployeeName", e."Phone"
+FROM "Employees" AS e
+2023-07-11 11:54:54.3010|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (165ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT e."EmployeeId", e."Email", e."EmployeeName", e."Phone"
+FROM "Employees" AS e
+2023-07-11 11:54:54.4316|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'EmployeeDbContext' started tracking 'Employee' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-07-11 11:54:54.4730|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'EmployeeDbContext' started tracking 'Employee' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-07-11 11:54:54.4730|DEBUG|Microsoft.EntityFrameworkCore.ChangeTracking|Context 'EmployeeDbContext' started tracking 'Employee' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-07-11 11:54:54.4981|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|Closing data reader to 'myWebApi' on server 'tcp://localhost:8240'.
+2023-07-11 11:54:54.5278|DEBUG|Microsoft.EntityFrameworkCore.Database.Command|A data reader for 'myWebApi' on server 'tcp://localhost:8240' is being disposed after spending 215ms reading results.
+2023-07-11 11:54:54.5835|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closing connection to database 'myWebApi' on server 'tcp://localhost:8240'.
+2023-07-11 11:54:54.6039|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Closed connection to database 'myWebApi' on server '' (22ms).
+2023-07-11 11:54:54.6078|INFO|WebApplication5.Controllers.EmployeeController|Retrieve all employees
+2023-07-11 11:54:54.6078|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method WebApplication5.Controllers.EmployeeController.GetAllEmployees (WebApplication5), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3749.8662ms.
+2023-07-11 11:54:54.6078|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2023-07-11 11:54:54.6078|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter.
+2023-07-11 11:54:54.6218|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2023-07-11 11:54:54.6218|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter.
+2023-07-11 11:54:54.6218|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2023-07-11 11:54:54.6218|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2023-07-11 11:54:54.6218|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult.
+2023-07-11 11:54:54.6368|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter
+2023-07-11 11:54:54.6368|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation.
+2023-07-11 11:54:54.6368|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2023-07-11 11:54:54.6368|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result.
+2023-07-11 11:54:54.6368|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2023-07-11 11:54:54.6368|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WebApplication5.Employee, WebApplication5, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-07-11 11:54:54.6982|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult.
+2023-07-11 11:54:54.6982|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2023-07-11 11:54:54.6982|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter.
+2023-07-11 11:54:54.7086|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action WebApplication5.Controllers.EmployeeController.GetAllEmployees (WebApplication5) in 5167.163ms
+2023-07-11 11:54:54.7086|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'WebApplication5.Controllers.EmployeeController.GetAllEmployees (WebApplication5)'
+2023-07-11 11:54:54.7086|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMS1QU1696H5" completed keep alive response.
+2023-07-11 11:54:54.7202|DEBUG|Microsoft.EntityFrameworkCore.Infrastructure|'EmployeeDbContext' disposed.
+2023-07-11 11:54:54.7391|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Disposing connection to database 'myWebApi' on server ''.
+2023-07-11 11:54:54.7391|DEBUG|Microsoft.EntityFrameworkCore.Database.Connection|Disposed connection to database 'myWebApi' on server '' (6ms).
+2023-07-11 11:54:54.7391|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET http://localhost:5059/api/Employee - - - 200 - application/json;+charset=utf-8 5319.1404ms
+2023-07-11 11:54:59.0971|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMS1QU1696H5" received FIN.
+2023-07-11 11:54:59.0971|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMS1QU1696H5" disconnecting.
+2023-07-11 11:54:59.0971|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMS1QU1696H5" stopped.
+2023-07-11 11:54:59.0971|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMS1QU1696H5" sending FIN because: "The Socket transport's send loop completed gracefully."

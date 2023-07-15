@@ -4140,7 +4140,6 @@
       "Microsoft.EntityFrameworkCore.InMemory >= 7.0.8",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.8",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.8",
-      "NLog >= 5.2.2",
       "NLog.Web.AspNetCore >= 5.3.2",
       "Npgsql >= 7.0.4",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 7.0.4",
@@ -4209,10 +4208,6 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[7.0.8, )"
-          },
-          "NLog": {
-            "target": "Package",
-            "version": "[5.2.2, )"
           },
           "NLog.Web.AspNetCore": {
             "target": "Package",
